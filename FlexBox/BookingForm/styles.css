@@ -1,0 +1,104 @@
+html{
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: sans-serif;
+    margin: 0;
+    overflow: hidden;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100%;
+}
+
+/*position the video in the center
+ and make it cover the whole viewport*/
+.beach{
+  z-index: -1; /*place behind everything*/
+  position: fixed;
+  top: 50%; left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+}
+
+/*Hack to get them to align properly */
+.booking-form > *:not([type="date"]) {
+  border-top:1px solid white;
+  border-bottom:1px solid white;
+}
+
+.booking-form input[type="submit"] {
+  background:#FF5A5F;
+  border-top: 1px solid #FF5A5F;
+  border-bottom: 1px solid #FF5A5F;
+  color:white;
+}
+
+.booking-form > * {
+  border:0;
+  padding:10px;
+  background:white;
+  line-height:50px;
+  font-size: 20px;
+  border-radius:0;
+  outline:0;
+  border-right:1px solid rgba(0,0,0,0.2);
+  -webkit-appearance:none;
+}
+
+.booking-form > *:last-child {
+  border-right: 0;
+}
+
+/*Flexbox Starts Here*/
+
+.wrapper {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.booking-form {
+  border:20px solid rgba(0,0,0,0.3);
+  border-radius:5px;
+  display:flex;
+}
+
+input[type="search"] {
+  flex-basis:500px;
+}
+
+/*square form if the width is not enough*/
+@media all and (max-width: 1060px){
+    .booking-form{
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    .booking-form > *{
+        line-height: 15px;
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+    }
+
+    input[type="search"] {
+        flex-basis:75px;
+    }
+
+    #num-guests{
+        flex-basis: 60px;
+    }
+
+    input[type="submit"] {
+        flex-basis:60px;
+    }
+}
