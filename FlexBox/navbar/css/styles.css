@@ -1,0 +1,81 @@
+html{
+	box-sizing: border-box;
+}
+
+*, *:before, *:after{
+	box-sizing: inherit;
+}
+
+body{
+	font-family: sans-serif;
+	margin: 0;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cdeb8e+0,a5c956+100;Green+3D+%232 */
+	background: #cdeb8e; /* Old browsers */
+	background: -moz-linear-gradient(top,  #cdeb8e 0%, #a5c956 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #cdeb8e 0%,#a5c956 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=0 ); /* IE6-9 */
+	min-height: 100vh;
+}
+
+/*always apply text decoration directly to <a>*/
+a{
+	color: white;
+	font-weight: 100;
+	letter-spacing: 2px;
+	text-decoration: none;
+	background: rgba(0,0,0,0.2);
+	padding: 20px 5px;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	transition:all 0.4s;
+}
+
+a:hover{
+	background: rgba(0,0,0,0.3);
+}
+
+.wrapper{
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 50px;
+}
+
+.nav-flex ul{
+	/*border: 2px solid black;*/
+	box-shadow: 0px 0px 10px #000;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+}
+
+.nav-flex li{
+	flex: 3;
+}
+
+.nav-flex .social{
+	flex: 1;
+}
+
+@media all and (max-width: 1000px){
+	.nav-flex ul{
+		flex-wrap: wrap;
+	}
+	.nav-flex li{
+		flex: 1 1 50%;
+	}
+	.nav-flex .social{
+		flex: 1 1 25%;
+	}
+}
+
+@media all and (max-width: 500px){
+	.nav-flex li{
+		flex-basis: 100%
+	}
+}
+
