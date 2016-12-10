@@ -1,0 +1,67 @@
+body{
+	font-family: sans-serif;
+	margin: 0;
+	background: #93cede;
+	background: -moz-linear-gradient(top,  #93cede 0%, #75bdd1 41%, #49a5bf 100%);
+	background: -webkit-linear-gradient(top,  #93cede 0%,#75bdd1 41%,#49a5bf 100%);
+	background: linear-gradient(to bottom,  #93cede 0%,#75bdd1 41%,#49a5bf 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf',GradientType=0 );
+	min-height: 100vh;	/*the background fills the entire viewport*/
+}
+/*buy buttons*/
+.plan > a{
+	background: #f4f442;
+	border: none;
+	border-radius: 4px; 
+	padding: 10px;
+	color: #000;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.plan > h2{
+	color: white;
+	text-transform: uppercase;
+}
+
+.plan > ul{
+	list-style: none;
+	padding: 0;
+}
+
+.plan ul li{
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	padding: 10px;
+}
+
+.plan ul li:last-child{
+	border-bottom: 0;
+}
+
+.price{
+	font-family: serif;
+	font-size: 50px;
+	margin: 10px 0;
+}
+
+/*flex container*/
+.pricing-grid{
+	max-width: 750px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+
+/*flex item and 2 container*/
+.plan{
+	flex: 1;
+	background: rgba(255,255,255,0.3);
+	margin: 20px;
+	padding: 20px;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+}
+
+
