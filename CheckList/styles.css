@@ -1,0 +1,49 @@
+html{
+	box-sizing: border-box;
+	background: #f4f142;
+	font-family: helvetica, sans-serif;
+}
+
+*, *:before, *:after{
+	box-sizing: inherit;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.list-wrap{
+	max-width: 300px;
+	margin: 20px auto;
+	background: white;
+	border-radius: 5px;
+	box-shadow: 5px 5px 0 rgba(0,0,0,0.1);
+}
+
+.item{
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.item:last-child{
+	border-bottom: 0;
+}
+
+.item input{
+	margin: 10px;
+}
+
+.item p{
+	flex: 1;
+	padding: 10px;
+	border-left: 1px solid rgba(0,0,0,0.2);
+}
+
+input:checked + p{
+	text-decoration: line-through;
+	background: rgba(0,0,0,0.1);
+}
+
+

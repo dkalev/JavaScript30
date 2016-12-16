@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CheckList</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+	<div class="list-wrap">
+		
+			<div class="item">
+				<input type="checkbox">
+				<p>Eggs</p>
+			</div>
+			<div class="item">
+				<input type="checkbox">
+				<p>Bread</p>
+			</div>
+			<div class="item">
+				<input type="checkbox">
+				<p>Butter</p>
+			</div>
+			<div class="item">
+				<input type="checkbox">
+				<p>Spaghetti</p>
+			</div>
+			<div class="item">
+				<input type="checkbox">
+				<p>Orange juice</p>
+			</div>
+			<div class="item">
+				<input type="checkbox">
+				<p>Milk</p>
+			</div>
+			<div class="item">
+				<input type="checkbox">
+				<p>Sausages</p>
+			</div>
+			<div class="item">
+				<input type="checkbox">
+				<p>Rum</p>
+			</div>
+		
+	</div>
+
+	<script type="text/javascript">
+		checkboxes = document.querySelectorAll('.list-wrap input[type="checkbox"]');
+
+		let lastChecked;
+		function handleClick(e){
+			let inBetween = false;
+			
+			if(e.shiftKey && this	.checked){
+
+				checkboxes.forEach(checkbox => {
+
+					if(checkbox === this || checkbox === lastChecked){
+						inBetween = !inBetween;
+					}
+					if(inBetween){
+						checkbox.checked = true;
+					}
+				});
+
+			}
+			lastChecked = this;
+		}
+
+		checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleClick));
+	</script>
+
+</body>
+</html>
