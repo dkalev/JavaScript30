@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Web Cam</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+</head>
+<body>
+	<div class="photobooth">
+		
+		<div class="controls">
+			<button id="take-photo-btn">Take Photo</button>
+		</div>
+
+		<canvas class="photo"></canvas>
+		
+		<div class="strip"></div>
+
+	</div>
+
+	<video class="player"></video>
+	<audio class="snap" src="http://wesbos.com/demos/photobooth/snap.mp3" hidden></audio>
+	
+	<script src="js/scripts.js"></script>
+	<script type="text/javascript">
+		const socket = io.connect();
+		socket.on('connect', () => console.log('connected'));
+	</script>
+</body>
+</html>
